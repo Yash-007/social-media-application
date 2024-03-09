@@ -21,6 +21,9 @@ app.use('/backend/uploads/profile', express.static("backend/uploads/profile"))
 app.use("/api/v1/user",userRoute)
 app.use("/api/v1/post",postRoute)
 
+app.get('/', function (req, res) {
+  res.send('Hello from the server!')
+})
 
 
 const port = process.env.PORT || 4000;
